@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 25px;
+  cursor: pointer;
+}
+
+.nav-logo {
+  /* max-height: 80px; */
+  height: 80px;
+  width: 80px;
+}
+
+.company-name {
+  font-size: 25px;
+}
+
+.navigation {
+  list-style-type: none;
+  display: flex;
+  column-gap: 33px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-item:hover {
+  color: #800020;
+}
