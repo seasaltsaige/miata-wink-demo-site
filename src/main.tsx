@@ -10,13 +10,15 @@ import Navbar from './components/Navbar/Navbar.tsx'
 import NotFound from './routes/404/404.tsx'
 import Gallery from './routes/Gallery/Gallery.tsx'
 import LearnMore from './routes/LearnMore/LearnMore.tsx'
+import Footer from './components/Footer/Footer.tsx'
 
-const GlobalNavbar = ({ element }: { element: (() => JSX.Element) }) => {
+const GlobalNavbarFooter = ({ element }: { element: (() => JSX.Element) }) => {
   return <>
     <Navbar />
     {
       element()
     }
+    <Footer />
   </>
 }
 
@@ -27,20 +29,20 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <GlobalNavbar element={App} />
+    element: <GlobalNavbarFooter element={App} />
 
   },
   {
     path: '/gallery',
-    element: <GlobalNavbar element={Gallery} />
+    element: <GlobalNavbarFooter element={Gallery} />
   },
   {
     path: '/contact',
-    element: <GlobalNavbar element={Contact} />
+    element: <GlobalNavbarFooter element={Contact} />
   },
   {
     path: '/info',
-    element: <GlobalNavbar element={LearnMore} />
+    element: <GlobalNavbarFooter element={LearnMore} />
   }
 ])
 
