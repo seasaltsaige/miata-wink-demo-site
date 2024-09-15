@@ -65,20 +65,85 @@
   border-bottom: 1px solid #800020;
 }
 
+.burger-icon,
+.close-icon {
+  margin-right: 20px;
+  z-index: 99999;
+}
+
+.navigation-slide-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  background-color: black;
+  transition: 0.5s ease;
+}
+
+.navigation-slide-in.nav-closed {
+  opacity: 0%;
+}
+
+.navigation-slide-in.nav-open {
+  opacity: 100%;
+}
+
+
+.navigation-slide-in>.nav-item {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.navigation-slide-in>.nav-item:hover,
+.navigation-slide-in>.nav-item:active {
+  background-color: var(--background-primary);
+}
+
+
+.burger-icon {
+  width: 57px;
+  height: 57px;
+  fill: white;
+  stroke: white;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 40px;
+  height: 40px;
+  fill: white;
+  stroke: white;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 750px) {
   .company-name {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .nav-item {
     font-size: 16px;
   }
+
+  .navbar {
+    background-color: var(--background-primary);
+  }
 }
 
 @media screen and (max-width: 450px) {
   .company-name {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .nav-item {
