@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom'
-import RightArrow from "./assets/RightArrow.svg";
-import './App.css'
-import useWindowDimensions from './hooks/useWindowDimensions';
+import RightArrow from "../../assets/RightArrow.svg";
+import './Home.css'
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { useEffect, useState } from 'react';
 
 const features = [
-  "Ultimate",
-  "Affordable",
-  "Stylish",
-  "Iconic",
-  "Bold",
-  "Custom"
+  ["the", "Ultimate"],
+  ["an", "Affordable"],
+  ["a", "Stylish"],
+  ["the", "Iconic"],
+  ["a", "Bold"],
+  ["a", "Custom"],
 ];
 
-function App() {
+function Home() {
   const { width } = useWindowDimensions();
   const [curr, setCurr] = useState(0);
 
@@ -36,7 +36,7 @@ function App() {
         <div className='text-cta'>
           <h1 className='cta-header-top'><strong>Upgrade</strong> your Miata's <strong>Style</strong></h1>
           {width > 750 ? <br /> : ""}
-          <h1 className='cta-header-bottom'>with the <span key={curr} className='cta-header-cycle'><strong>{features[curr]}</strong></span> Wink Mod</h1>
+          <h1 className='cta-header-bottom'>with<span key={curr} className='cta-header-cycle'> {features[curr][0]} <strong>{features[curr][1]}</strong></span> Wink Mod</h1>
           <div className='cta-button-container'>
             <Link className='cta-button' to="/info">Learn More <RightArrow /> </Link>
             <Link className='cta-button' to="/gallery">See it in Action <RightArrow /> </Link>
@@ -56,4 +56,4 @@ function App() {
   )
 }
 
-export default App
+export default Home;
