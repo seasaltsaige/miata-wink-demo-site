@@ -58,7 +58,7 @@ export default function Navbar() {
         }
       </nav>
       {
-        (navigation.location || width < 750) ?
+        (!navigation.location || width < 750) ?
           <div className="navbar-spacer"></div>
           : <></>
       }

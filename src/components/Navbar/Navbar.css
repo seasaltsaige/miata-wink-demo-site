@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  top: 0;
+  left: 0;
   height: calc(var(--nav-height) - 1px);
   /* background-color: var(--background-primary); */
   background-color: transparent;
