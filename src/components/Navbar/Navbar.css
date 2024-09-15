@@ -7,8 +7,8 @@
   top: 0;
   left: 0;
   height: calc(var(--nav-height) - 1px);
-  /* background-color: var(--background-primary); */
-  background-color: transparent;
+  background-color: var(--background-primary);
+  /* background-color: transparent; */
   border-bottom: 1px solid rgba(97, 97, 97, 0.46);
   z-index: 1000;
 }
@@ -19,6 +19,7 @@
 
 .navbar-spacer {
   height: var(--nav-height);
+  min-height: var(--nav-height);
   width: 100%;
   background-color: transparent;
 }
