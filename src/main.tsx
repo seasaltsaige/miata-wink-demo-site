@@ -9,6 +9,7 @@ import './index.css'
 import Navbar from './components/Navbar/Navbar.tsx'
 import NotFound from './routes/404/404.tsx'
 import Gallery from './routes/Gallery/Gallery.tsx'
+import LearnMore from './routes/LearnMore/LearnMore.tsx'
 
 const GlobalNavbar = ({ element }: { element: (() => JSX.Element) }) => {
   return <>
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <GlobalNavbar element={Contact} />
+  },
+  {
+    path: '/info',
+    element: <GlobalNavbar element={LearnMore} />
   }
 ])
 

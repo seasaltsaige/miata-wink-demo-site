@@ -1,9 +1,24 @@
 .navbar {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 40px;
+  width: 100%;
+  height: calc(var(--nav-height) - 1px);
+  /* background-color: var(--background-primary); */
+  background-color: transparent;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.46);
+  z-index: 1000;
+}
+
+.navbar>* {
+  user-select: none;
+}
+
+.navbar-spacer {
+  height: var(--nav-height);
+  width: 100%;
+  background-color: transparent;
 }
 
 .logo-container {
@@ -11,18 +26,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 25px;
   cursor: pointer;
 }
 
 .nav-logo {
-  /* max-height: 80px; */
-  height: 80px;
-  width: 80px;
+  margin-left: 25px;
+  height: 75px;
+  width: 75px;
 }
 
 .company-name {
-  font-size: 25px;
+  margin: 0;
+  margin-left: 25px;
+  font-size: 28px;
+  color: white;
+  font-family: var(--main-font);
 }
 
 .navigation {
@@ -31,14 +49,39 @@
   column-gap: 33px;
   margin: 0;
   padding: 0;
+  margin-right: 25px;
 }
 
 .nav-item {
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: rgb(224, 217, 229);
+  transition: 0.25s ease;
+  font-family: var(--main-font);
 }
 
 .nav-item:hover {
   color: #800020;
+  border-bottom: 1px solid #800020;
+}
+
+
+@media screen and (max-width: 750px) {
+  .company-name {
+    font-size: 20px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .company-name {
+    font-size: 18px;
+  }
+
+  .nav-item {
+    font-size: 15px;
+  }
 }
