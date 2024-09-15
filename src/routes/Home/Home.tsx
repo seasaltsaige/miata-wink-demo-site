@@ -26,12 +26,7 @@ function Home() {
     <div className='home-page'>
       <div className='splash-cta'>
         <video disablePictureInPicture autoPlay muted loop className='cta-video'>
-          <source src="/cta-video.webm" />
-          {
-            /*
-
-             */
-          }
+          <source src="/cta-video.mp4" />
         </video>
         <div className='text-cta'>
           <h1 className='cta-header-top'><strong>Upgrade</strong> your Miata's <strong>Style</strong></h1>

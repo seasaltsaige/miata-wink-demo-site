@@ -17,7 +17,7 @@ export default function TermsOfUse() {
         1. Product Use
       </h2>
       <p>
-        The Wink Mod is intended for use in an 'NA' (1989-1997) Miata vehicle. By purchasing the Wink Mod, you agree to use it solely for its intended purpose and in compliance with all applicable laws, regulations, and vehicle safety standards.
+        The Wink Mod is intended for use in an 'NA' (1989-1997) Mazda Miata vehicle. By purchasing the Wink Mod, you agree to use it solely for its intended purpose and in compliance with all applicable laws, regulations, and vehicle safety standards.
       </p>
       <h2>
         2. Disclaimer
@@ -64,8 +64,8 @@ export default function TermsOfUse() {
       <h2>
         9. Contact Information
       </h2>
-      <p>
-        If you have any questions about these Terms, please contact us at <a href="mailto:miatawinktech@gmail.com" target="_blank">miatawinktech@gmail.com</a>.
+      <p className="contact">
+        If you have any questions about these Terms, please contact us at <a href="mailto:miatawinktech@gmail.com" target="_blank">miatawinktech@gmail.com</a>
       </p>
     </div>
   </div>

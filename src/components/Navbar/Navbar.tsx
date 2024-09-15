@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="logo-container" onClick={() => { setNavOpen(false); navigate("/") }} >
           {
             width > 800 ?
-              <img className="nav-logo" src="/logo.png" alt="Miata Tech Logo" />
+              <img className="nav-logo" src="/logo.webp" alt="Miata Tech Logo" />
               : <></>
           }
           <h1 className="company-name">Miata Tech Wink Mod</h1>
