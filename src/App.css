@@ -50,6 +50,7 @@
 
 .cta-header-top,
 .cta-header-bottom {
+  width: 100%;
   margin: 0;
   padding: 0;
   color: white;
@@ -63,6 +64,30 @@
 
 .cta-header-bottom {
   align-self: flex-end;
+}
+
+.cta-header-cycle {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInOut 5s forwards linear;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0%;
+  }
+
+  10% {
+    opacity: 100%;
+  }
+
+  90% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
 }
 
 .cta-button-container {
@@ -102,12 +127,15 @@
 }
 
 .cta-button:hover,
-.cta-button:hover>.rightarrow {
+.cta-button:hover>.rightarrow,
+.cta-button:active,
+.cta-button:active>.rightarrow {
   color: #800020;
   fill: #800020;
 }
 
-.cta-button:hover>.rightarrow {
+.cta-button:hover>.rightarrow,
+.cta-button:active>.rightarrow {
   animation-name: arrowAnimate;
   animation-timing-function: ease-out;
 }
@@ -121,7 +149,7 @@
   color: white;
   font-family: var(--main-font);
   font-weight: lighter;
-  bottom: 0;
+  bottom: 9px;
   width: 100%;
   text-align: center;
   margin: 2px;
@@ -148,12 +176,12 @@
 @media screen and (max-width: 750px) {
   .cta-video {
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     /* min-height: 50vh; */
   }
 
   .splash-cta {
-    height: 50vh;
+    height: 55vh;
   }
 
   .text-cta {
@@ -187,9 +215,6 @@
 
   .temp-video-notice {
     margin: 0;
-    position: unset;
-    background-color: rgb(238, 232, 255);
-    color: black;
-    font-weight: bold;
+    font-size: 14px;
   }
 }
