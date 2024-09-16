@@ -5,4 +5,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
+  text-shadow: 3px 3px 1px #800020;
+}
+
+.not-found>h1 {
+  font-family: var(--main-font);
+  text-align: center;
+  margin: 10px;
+}
+
+.not-found>h2,
+.not-found>h3,
+.not-found>a {
+  text-align: center;
+  font-family: var(--secondary-font);
+  margin: 10px;
+}
+
+.not-found>a {
+  text-shadow: none;
+  color: #800020;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.not-found>a:hover {
+  color: #9c0027;
+}
+
+.not-found>a:active {
+  color: #b2002d;
 }

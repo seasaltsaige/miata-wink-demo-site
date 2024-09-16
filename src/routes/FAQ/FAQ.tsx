@@ -33,10 +33,6 @@ const qas = [
     "The wink mod is powered directly by the 12V rail that powers the headlight motors. The module often goes to sleep when not being used, only periodically waking to attempt to connect to your phone."
   ],
   [
-    "Will the Wink Mod kill my battery?",
-    ""
-  ],
-  [
     "Is there a way to update the software on the Wink Mod?",
     "Yes, updates are uploaded to the cloud, and the wink controller app will scan for updates when the app connects to your module. If one is found, you will be able to follow on app instructions on how to update the module."
   ],

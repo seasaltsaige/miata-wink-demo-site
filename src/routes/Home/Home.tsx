@@ -44,9 +44,6 @@ function Home() {
           <p style={{ margin: 0 }}><a href="https://www.youtube.com/@EverydayDriver" target='_blank'>@EverydayDriver</a> on YouTube</p>
         </p>
       </div>
-
-
-
     </div >
   )
 }
