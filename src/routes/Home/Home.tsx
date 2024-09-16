@@ -25,7 +25,7 @@ function Home() {
   return (
     <div className='home-page'>
       <div className='splash-cta'>
-        <video disablePictureInPicture autoPlay muted loop className='cta-video'>
+        <video playsInline disablePictureInPicture autoPlay muted loop className='cta-video'>
           <source src="/cta-video.mp4" />
         </video>
         <div className='text-cta'>
