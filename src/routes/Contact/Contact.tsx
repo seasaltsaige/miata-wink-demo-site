@@ -12,9 +12,6 @@ export default function Contact() {
           <label>Email <input type="email" name="email" /></label>
         </p>
         <p>
-          <label>Phone <input type="tel" name="phone" /></label>
-        </p>
-        <p>
           <button type="submit">Send</button>
         </p>
       </form>
