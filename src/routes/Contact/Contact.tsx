@@ -36,6 +36,7 @@ export default function Contact() {
           <h2 className="contact-us-header">Contact Us</h2>
           <form method="post" className="contact-form" name="contact-form" netlify>
             {/* <div> */}
+            <input type="hidden" name="form-name" value="contact-form" />
             <p>
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
             </p>
