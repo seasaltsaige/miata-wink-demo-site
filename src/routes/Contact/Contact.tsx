@@ -35,14 +35,21 @@ export default function Contact() {
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
           <form className="contact-form" name="contact-form" netlify>
-            <span className="name-container">
+            <p className="name-container" style={{ margin: 0 }}>
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
-            </span>
+            </p>
 
-            <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
-            <input className="phone-input" type="tel" placeholder="Phone Number (optional)" />
-            <input required className="subject-input" type="text" placeholder="Message Subject" />
+            <p style={{ margin: 0, width: "100%" }}>
+              <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
+            </p>
+            <p style={{ margin: 0, width: "100%" }}>
+              <input className="phone-input" type="tel" placeholder="Phone Number (optional)" />
+            </p>
+
+            <p style={{ margin: 0, width: "100%" }}>
+              <input required className="subject-input" type="text" placeholder="Message Subject" />
+            </p >
             <textarea required className="main-input" name="body" placeholder="Message" />
 
             <button className="form-submit" type="submit">SEND</button>
