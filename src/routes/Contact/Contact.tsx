@@ -8,27 +8,34 @@ export default function Contact() {
   const [submitPopupOpen, setSubmitPopupOpen] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
+  // console.log(document.forms)
+  const handleSubmit = (event: React.FormEvent<HTMLInputElement>) => {
     event.preventDefault();
+    // const form = Array.from(document.forms).find(v => v.classList.contains("contact-form"));
+    const form = event.target;
+    const formData = new FormData(form);
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
+    fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        document.getElementsByTagName("body")[0].classList.add("modal-open");
         setIsError(false);
+
         setSubmitPopupOpen(true);
       })
       .catch((error) => {
-        document.getElementsByTagName("body")[0].classList.add("modal-open");
         setIsError(true);
+
         setSubmitPopupOpen(true);
       });
+
+    document.getElementsByTagName("body")[0].classList.add("modal-open");
+    document.getElementsByClassName("fname-input")[0].value = "";
+    document.getElementsByClassName("lname-input")[0].value = "";
+    Array.from(form?.children).forEach(c => c.value = "");
+
   }
 
   const closeModal = () => {
@@ -71,7 +78,7 @@ export default function Contact() {
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
 
-          <form className="contact-form" name="contact">
+          <form id="contact-form" className="contact-form" name="contact" onSubmit={(ev) => { handleSubmit(ev) }}>
             <input type="hidden" name="form-name" value="contact" />
             <div className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
@@ -81,7 +88,7 @@ export default function Contact() {
             <input className="phone-input" type="tel" name="phone-number" placeholder="Phone Number (optional)" />
             <input required className="subject-input" name="subject" type="text" placeholder="Message Subject" />
             <textarea required className="main-input" name="body" placeholder="Message" />
-            <button onClick={(ev) => handleSubmit(ev)} className="form-submit" type="submit">SEND</button>
+            <button form="contact-form" className="form-submit" type="submit">SEND</button>
           </form>
         </div>
       </div>

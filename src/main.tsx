@@ -12,14 +12,6 @@ import FAQ from './routes/FAQ/FAQ.tsx';
 import TermsOfUse from './routes/TermsOfUse/TermsOfUse.tsx';
 import Home from './routes/Home/Home.tsx';
 
-const GlobalNavbarFooter = ({ element }: { element: (() => JSX.Element) }) => {
-  return <>
-    <Navbar />
-    {element()}
-    <Footer />
-  </>
-}
-
 const router = createBrowserRouter([
   {
     path: '*',
@@ -27,28 +19,52 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <GlobalNavbarFooter element={Home} />
+    element: <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
 
   },
   {
     path: '/gallery',
-    element: <GlobalNavbarFooter element={Gallery} />
+    element: <>
+      <Navbar />
+      <Gallery />
+      <Footer />
+    </>
   },
   {
     path: '/contact',
-    element: <GlobalNavbarFooter element={Contact} />
+    element: <>
+      <Navbar />
+      <Contact />
+      <Footer />
+    </>
   },
   {
     path: '/info',
-    element: <GlobalNavbarFooter element={LearnMore} />
+    element: <>
+      <Navbar />
+      <LearnMore />
+      <Footer />
+    </>
   },
   {
     path: '/faq',
-    element: <GlobalNavbarFooter element={FAQ} />
+    element: <>
+      <Navbar />
+      <FAQ />
+      <Footer />
+    </>
   },
   {
     path: '/terms',
-    element: <GlobalNavbarFooter element={TermsOfUse} />
+    element: <>
+      <Navbar />
+      <TermsOfUse />
+      <Footer />
+    </>
   },
 
 ])
