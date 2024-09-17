@@ -4,21 +4,6 @@ import Email from "../../assets/Email.svg";
 import Phone from "../../assets/Phone.svg";
 export default function Contact() {
 
-  // const handleSubmit = (event: any) => {
-  //   event.preventDefault();
-
-  //   const myForm = event.target;
-  //   const formData = new FormData(myForm);
-
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: new URLSearchParams(formData as any).toString(),
-  //   })
-  //     .then(() => console.log("Form successfully submitted"))
-  //     .catch((error) => alert(error));
-  // };
-
   return (
     <div className="contact-page">
       <div className="contact-items">
@@ -43,7 +28,7 @@ export default function Contact() {
               </div>
               <div className="phone-info contact-item">
                 <Phone />
-                <a href="tel:1111111111">(111) 111-1111</a>
+                <a href="tel:8056995661">(805) 699-5661</a>
               </div>
             </div>
           </div>
