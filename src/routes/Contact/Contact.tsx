@@ -53,6 +53,7 @@ export default function Contact() {
 
             <textarea required className="main-input" name="body" placeholder="Message" />
 
+            <div data-netlify-recaptcha="true"></div>
             <button className="form-submit" type="submit">SEND</button>
 
           </form>
