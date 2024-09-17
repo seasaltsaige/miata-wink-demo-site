@@ -34,20 +34,19 @@ export default function Contact() {
         </div>
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
-          <form method="post" className="contact-form" name="contact" data-netlify="true">
-
+          <form className="contact-form" name="contact" data-netlify="true">
             <span className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
             </span>
 
             <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
-
             <input className="phone-input" type="tel" placeholder="Phone Number (optional)" />
-
             <input required className="subject-input" type="text" placeholder="Message Subject" />
             <textarea required className="main-input" name="body" placeholder="Message" />
-            <button className="form-submit" type="submit" form="contact">SEND</button>
+
+            <button className="form-submit" type="submit">SEND</button>
+
           </form>
         </div>
       </div>
