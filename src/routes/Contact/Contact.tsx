@@ -26,7 +26,7 @@ export default function Contact() {
                 <Email />
                 <a href="mailto:miatawinktech@gmail.com">miatawinktech@gmail.com</a>
               </div>
-              <div className="phone-info contact-item">
+              <div className="phone-info contact-item ">
                 <Phone />
                 <a href="tel:8056995661">(805) 699-5661</a>
               </div>
