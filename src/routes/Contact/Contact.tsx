@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
-          <form className="contact-form" name="contact" netlify>
+          <form className="contact-form" name="contact-form" netlify>
             <span className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
