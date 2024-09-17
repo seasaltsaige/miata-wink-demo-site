@@ -34,8 +34,19 @@ export default function Contact() {
         </div>
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
-          <form method="post" className="contact-form" name="contact-form" netlify>
-            {/* <div> */}
+          <form name="contact" netlify>
+            <p>
+              <label>Name <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Email <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+          {/* <form method="post" className="contact-form" name="contact-form" netlify>
+
             <input type="hidden" name="form-name" value="contact-form" />
             <p>
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
@@ -43,7 +54,6 @@ export default function Contact() {
             <p>
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
             </p>
-            {/* </div> */}
 
             <p>
               <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
@@ -61,7 +71,7 @@ export default function Contact() {
             <p>
               <button className="form-submit" type="submit">SEND</button>
             </p>
-          </form>
+          </form> */}
         </div>
       </div>
     </div>
