@@ -14,11 +14,11 @@ export default function Contact() {
             </h1>
 
             <p className="contact-description-upper">
-              We are here to help, whether you have an issue with a product, or you want to reach out to contact us about purchasing something. We want you to have the best experience possible with our product(s) and for any potential problems to get resolved as quickly as possible.
+              We're here to assist you! Whether you're experiencing an issue with your purchase or looking to inquire about buying a product, we're committed to making sure you have the best experience with our product(s). If any problems arise, we'll work to resolve them as quickly as possible.
             </p>
 
             <p className="contact-description-lower">
-              As an individually run business, we do not have any live chat, and we can't promise that we get back to you within the day. Please allow up to 2 business days for a response. We do not check emails/phone calls on the weekend or national holidays.
+              As a small, individually run business, we don't offer live chat and may not be able to respond the same day. Please allow up to 2 business days for a response. We do not check emails or phone messages on weekends or national holidays.
             </p>
 
             <div className="contact-info-items">
@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
 
-          <form method="post" action="/success" className="contact-form" name="contact">
+          <form method="post" className="contact-form" name="contact">
             <div className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
