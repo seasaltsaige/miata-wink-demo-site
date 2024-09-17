@@ -1,7 +1,24 @@
+//@ts-nocheck
 import "./Contact.css";
 import Email from "../../assets/Email.svg";
 import Phone from "../../assets/Phone.svg";
 export default function Contact() {
+
+  // const handleSubmit = (event: any) => {
+  //   event.preventDefault();
+
+  //   const myForm = event.target;
+  //   const formData = new FormData(myForm);
+
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData as any).toString(),
+  //   })
+  //     .then(() => console.log("Form successfully submitted"))
+  //     .catch((error) => alert(error));
+  // };
+
   return (
     <div className="contact-page">
       <div className="contact-items">
@@ -34,7 +51,7 @@ export default function Contact() {
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
 
-          <form method="GET" action="/contact" className="contact-form" name="contact" data-netlify="true">
+          <form method="post" className="contact-form" name="contact">
 
             <input type="hidden" name="form-name" value="contact" />
             <div className="name-container">
