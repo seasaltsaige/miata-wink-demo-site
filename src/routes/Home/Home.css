@@ -106,17 +106,16 @@
   flex-direction: row;
   align-items: center;
   font-family: var(--secondary-font);
-  /* justify-items: center; */
   overflow: hidden;
-  font-size: 19px;
+  font-size: 24px;
   font-weight: bold;
   color: white;
 }
 
 .rightarrow {
   fill: white;
-  height: 30px;
-  width: 30px;
+  height: 32px;
+  width: 32px;
   transition: 0.25s ease;
   margin-left: 20px;
   animation-duration: 1s;

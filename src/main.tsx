@@ -11,7 +11,6 @@ import Footer from './components/Footer/Footer.tsx';
 import FAQ from './routes/FAQ/FAQ.tsx';
 import TermsOfUse from './routes/TermsOfUse/TermsOfUse.tsx';
 import Home from './routes/Home/Home.tsx';
-import Success from './routes/FormSuccess/FormSuccess.tsx';
 
 const GlobalNavbarFooter = ({ element }: { element: (() => JSX.Element) }) => {
   return <>
@@ -51,10 +50,7 @@ const router = createBrowserRouter([
     path: '/terms',
     element: <GlobalNavbarFooter element={TermsOfUse} />
   },
-  {
-    path: '/success',
-    element: <Success />
-  }
+
 ])
 
 

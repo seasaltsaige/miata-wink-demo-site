@@ -2,10 +2,45 @@
 import "./Contact.css";
 import Email from "../../assets/Email.svg";
 import Phone from "../../assets/Phone.svg";
+import { useState } from "react";
 export default function Contact() {
+
+  const [submitPopupOpen, setSubmitPopupOpen] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const handleSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        document.getElementsByTagName("body")[0].classList.add("modal-open");
+        setIsError(false);
+        setSubmitPopupOpen(true);
+      })
+      .catch((error) => {
+        document.getElementsByTagName("body")[0].classList.add("modal-open");
+        setIsError(true);
+        setSubmitPopupOpen(true);
+      });
+  }
+
+  const closeModal = () => {
+    document.getElementsByTagName("body")[0].classList.remove("modal-open");
+    setSubmitPopupOpen(false);
+    setIsError(false);
+  }
+
 
   return (
     <div className="contact-page">
+      {/* TODO: rewrite to not state things we cant do. state things we CAN do */}
       <div className="contact-items">
         <div className="contact-information">
           <div className="contact-info-wrapper">
@@ -46,10 +81,37 @@ export default function Contact() {
             <input className="phone-input" type="tel" name="phone-number" placeholder="Phone Number (optional)" />
             <input required className="subject-input" name="subject" type="text" placeholder="Message Subject" />
             <textarea required className="main-input" name="body" placeholder="Message" />
-            <button className="form-submit" type="submit">SEND</button>
+            <button onSubmit={(ev) => handleSubmit(ev)} className="form-submit" type="submit">SEND</button>
           </form>
         </div>
       </div>
+
+      {
+        submitPopupOpen ?
+          <div className="submission-modal">
+            <div className="submission-popup">
+              <h1 className="popup-header">
+                {
+                  isError
+                    ? "Something went wrong..."
+                    : "Thank you for reaching out!"}
+              </h1>
+              <p className="popup-text">
+                {
+                  isError
+                    ? "Something went wrong behind the scenes, and your message was not sent. Please try again, and if this error persists, please reach out to our email directly."
+                    : "Your submission has been received! We will get back to you as soon as we can."
+                }
+              </p>
+              <button className="close-modal"
+                onClick={() => closeModal()}
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+          : <></>
+      }
     </div>
   )
 }

@@ -44,6 +44,10 @@ body {
   background-color: var(--background-primary);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
