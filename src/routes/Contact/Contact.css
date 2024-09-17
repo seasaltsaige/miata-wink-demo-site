@@ -1,6 +1,5 @@
 .contact-page {
   width: 100%;
-  min-height: 65vh;
 }
 
 .contact-items {
@@ -35,6 +34,7 @@
   min-width: 330px;
   align-items: center;
   justify-content: flex-start;
+  min-height: 700px;
 }
 
 .contact-description-upper,

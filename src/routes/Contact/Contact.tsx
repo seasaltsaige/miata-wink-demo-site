@@ -36,26 +36,16 @@ export default function Contact() {
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
 
-          <form data-netlify-recaptcha="true" method="post" action="/success" className="contact-form" name="contact">
-
-            <input type="hidden" name="form-name" value="contact" />
+          <form method="post" action="/success" className="contact-form" name="contact">
             <div className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
-
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
             </div>
-
             <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
-
             <input className="phone-input" type="tel" name="phone-number" placeholder="Phone Number (optional)" />
-
             <input required className="subject-input" name="subject" type="text" placeholder="Message Subject" />
-
             <textarea required className="main-input" name="body" placeholder="Message" />
-
-            <div data-netlify-recaptcha="true"></div>
             <button className="form-submit" type="submit">SEND</button>
-
           </form>
         </div>
       </div>
