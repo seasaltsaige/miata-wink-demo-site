@@ -33,54 +33,27 @@ export default function Contact() {
         </div>
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>Your Name: <input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <label>Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
 
-          {/* <form method="post" className="contact-form" name="contact-form" netlify>
+          <form method="post" className="contact-form" name="contact" data-netlify="true">
 
-            <input type="hidden" name="form-name" value="contact-form" />
-            <p>
+            <input type="hidden" name="form-name" value="contact" />
+            <div className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
-            </p>
-            <p>
+
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
-            </p>
+            </div>
 
-            <p>
-              <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
-            </p>
-            <p >
-              <input className="phone-input" type="tel" placeholder="Phone Number (optional)" />
-            </p>
+            <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
 
-            <p >
-              <input required className="subject-input" type="text" placeholder="Message Subject" />
-            </p >
-            <p>
-              <textarea required className="main-input" name="body" placeholder="Message" />
-            </p>
-            <p>
-              <button className="form-submit" type="submit">SEND</button>
-            </p>
-          </form> */}
+            <input className="phone-input" type="tel" placeholder="Phone Number (optional)" />
+
+            <input required className="subject-input" type="text" placeholder="Message Subject" />
+
+            <textarea required className="main-input" name="body" placeholder="Message" />
+
+            <button className="form-submit" type="submit">SEND</button>
+
+          </form>
         </div>
       </div>
     </div>
