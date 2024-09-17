@@ -81,7 +81,7 @@ export default function Contact() {
             <input className="phone-input" type="tel" name="phone-number" placeholder="Phone Number (optional)" />
             <input required className="subject-input" name="subject" type="text" placeholder="Message Subject" />
             <textarea required className="main-input" name="body" placeholder="Message" />
-            <button onSubmit={(ev) => handleSubmit(ev)} className="form-submit" type="submit">SEND</button>
+            <button onClick={(ev) => handleSubmit(ev)} className="form-submit" type="submit">SEND</button>
           </form>
         </div>
       </div>
