@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="contact-form-wrapper">
           <h2 className="contact-us-header">Contact Us</h2>
 
-          <form method="post" action="/success" className="contact-form" name="contact">
+          <form data-netlify-recaptcha="true" method="post" action="/success" className="contact-form" name="contact">
 
             <input type="hidden" name="form-name" value="contact" />
             <div className="name-container">
