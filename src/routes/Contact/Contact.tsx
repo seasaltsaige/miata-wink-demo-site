@@ -62,9 +62,9 @@ export default function Contact() {
 
             <input required className="email-input" type="email" name="email" placeholder="example@email.com" />
 
-            <input className="phone-input" type="tel" placeholder="Phone Number (optional)" />
+            <input className="phone-input" type="tel" name="phone-number" placeholder="Phone Number (optional)" />
 
-            <input required className="subject-input" type="text" placeholder="Message Subject" />
+            <input required className="subject-input" name="subject" type="text" placeholder="Message Subject" />
 
             <textarea required className="main-input" name="body" placeholder="Message" />
 
