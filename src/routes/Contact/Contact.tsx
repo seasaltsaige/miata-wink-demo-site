@@ -37,6 +37,7 @@ export default function Contact() {
           <h2 className="contact-us-header">Contact Us</h2>
 
           <form method="post" className="contact-form" name="contact">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="name-container">
               <input required className="fname-input" type="text" name="fname" placeholder="First Name" />
               <input required className="lname-input" type="text" name="lname" placeholder="Last Name" />
