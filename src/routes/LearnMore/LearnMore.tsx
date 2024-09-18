@@ -2,7 +2,7 @@ import "./LearnMore.css";
 
 
 export default function LearnMore() {
-  return <>
-    Learn More
-  </>
+  return <div className="learn-more-page">
+
+  </div>
 }

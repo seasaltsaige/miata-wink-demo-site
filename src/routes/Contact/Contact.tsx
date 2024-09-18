@@ -10,10 +10,8 @@ export default function Contact() {
   const [submitPopupOpen, setSubmitPopupOpen] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  // console.log(document.forms)
   const handleSubmit = (event: React.FormEvent<HTMLInputElement>) => {
     event.preventDefault();
-    // const form = Array.from(document.forms).find(v => v.classList.contains("contact-form"));
     const form = event.target;
     const formData = new FormData(form);
 
@@ -50,7 +48,6 @@ export default function Contact() {
   return (
     <>
       <div className="contact-page">
-        {/* TODO: rewrite to not state things we cant do. state things we CAN do */}
         <div className="contact-items">
           <div className="contact-information">
             <div className="contact-info-wrapper">
@@ -59,11 +56,11 @@ export default function Contact() {
               </h1>
 
               <p className="contact-description-upper">
-                We're here to assist you! Whether you're experiencing an issue with your purchase or looking to inquire about buying a product, we're committed to making sure you have the best experience with our product(s). If any problems arise, we'll work to resolve them as quickly as possible.
+                We're here to assist you! Whether you have a question about our product or need help with your purchase, we're dedicated to providing the best possible experience. If any issues come up, we'll work quickly to resolve them so you can get back to enjoying your product.
               </p>
 
               <p className="contact-description-lower">
-                As a small, individually run business, we don't offer live chat and may not be able to respond the same day. Please allow up to 2 business days for a response. We do not check emails or phone messages on weekends or national holidays.
+                As a small business, we personally handle every inquiry with care. While we aim to respond as swiftly as possible, please allow up to two business days for a reply. We appreciate your patience and understanding.
               </p>
 
               <div className="contact-info-items">
