@@ -1,0 +1,39 @@
+.learn-more-page {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.what-is-it {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wink-mod-header {
+    font-weight: 500;
+    font-family: var(--main-font);
+    font-size: 37px;
+    width: 80%;
+    text-align: center;
+}
+
+.wink-mod-description {
+    width: 80%;
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 17px;
+    text-align: left;
+}
