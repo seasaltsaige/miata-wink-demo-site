@@ -9,7 +9,6 @@ export default function Footer() {
       <Link className="footer-quick-link" to="/info">Learn More</Link>
       <Link className="footer-quick-link" to="/gallery">Gallery</Link>
       <Link className="footer-quick-link" to="/contact">Contact Us</Link>
-      <Link className="footer-quick-link" to="/faq">FAQ</Link>
       <Link className="footer-quick-link" to="/terms">Terms of Use</Link>
     </div>
   </div>

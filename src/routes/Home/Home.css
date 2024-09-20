@@ -112,7 +112,7 @@
   color: white;
 }
 
-.rightarrow {
+.cta-button>svg {
   fill: white;
   height: 32px;
   width: 32px;

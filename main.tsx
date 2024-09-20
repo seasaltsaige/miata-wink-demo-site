@@ -8,7 +8,6 @@ import Contact from './src/routes/Contact/Contact.tsx';
 import Gallery from './src/routes/Gallery/Gallery.tsx';
 import LearnMore from './src/routes/LearnMore/LearnMore.tsx';
 import Footer from './src/components/Footer/Footer.tsx';
-import FAQ from './src/routes/FAQ/FAQ.tsx';
 import TermsOfUse from './src/routes/TermsOfUse/TermsOfUse.tsx';
 import Home from './src/routes/Home/Home.tsx';
 
@@ -41,10 +40,6 @@ const router = createBrowserRouter([
   {
     path: '/info',
     element: <GlobalNavbarFooter element={LearnMore} />
-  },
-  {
-    path: '/faq',
-    element: <GlobalNavbarFooter element={FAQ} />
   },
   {
     path: '/terms',
