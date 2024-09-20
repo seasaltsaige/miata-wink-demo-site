@@ -27,7 +27,7 @@ const qas = [
   ],
   [
     "Can I request customization of the app and/or module?",
-    "Unfortunately, this option is generally only available for Android devices, as iOS makes it difficult to side-load any sort of app. If you own an iPhone, and wish for customization, you will need an Apple Developer account to be able to do so."
+    "Unfortunately, this option is generally only available for Android devices, as iOS makes it difficult to side-load any sort of app. If you own an iPhone, and would like customization, you will need an Apple Developer account to be able to do so."
   ],
   [
     "What comes with my purchase?",
