@@ -160,6 +160,8 @@
   align-items: center;
   justify-content: center;
   column-gap: 20px;
+  row-gap: 10px;
+  flex-wrap: wrap;
 }
 
 .install-container>a {
@@ -195,7 +197,6 @@
 }
 
 .why-us-table-compare {
-  /* width: 100%; */
   display: grid;
   grid-template-columns: 500px 200px 200px;
   border-radius: 6px;
@@ -206,36 +207,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  /* height: 70px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
-  font-weight: 500;
   font-family: var(--main-font);
   margin: 0;
-  font-size: 24px;
+  font-size: 23px;
 }
 
-.faq-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  row-gap: 10px;
+.why-us-header.ours {
+  font-weight: 600;
+}
+
+.why-us-header.others {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7)
 }
 
 .feature-text {
   margin: 0;
-  /* padding: 10px 0 10px 0; */
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* padding-left: 25px; */
   justify-content: center;
   font-family: var(--secondary-font);
   font-weight: 400;
-  height: 60px;
-  /* border-top: 1px solid rgba(0, 0, 0, 0.3); */
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.3); */
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* height: 60px; */
+}
+
+.feature-text,
+.feature-others,
+.feature-ours {
+  border-top: 2px solid rgba(88, 88, 88, 0.4);
+}
+
+.feature-text.init,
+.feature-others.init,
+.feature-ours.init {
+  border-top: none;
 }
 
 .feature-ours,
@@ -243,7 +256,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 10px 0 10px 0;
   justify-content: center;
 }
 
@@ -259,11 +271,73 @@
 }
 
 .question-mark {
-  fill: orange;
+  fill: #f66200;
 }
 
 .x-mark {
   stroke: red;
+}
+
+.why-us-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.compare-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 75px 75px;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.compare-card:nth-child(even) {
+  background-color: rgba(171, 171, 171, 0.273);
+}
+
+.comparison-header {
+  font-family: var(--main-font);
+  transform: rotateZ(-40deg);
+}
+
+.comparison-header.ours {
+  font-weight: 600;
+}
+
+.comparison-header.others {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+
+.compare-value {
+  font-size: 16px;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+}
+
+.compare-has {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 10px;
 }
 
 .questions-and-answers {
@@ -282,6 +356,7 @@
   width: 100%;
   border-top: 1px solid rgba(125, 125, 125, 0.5);
   padding: 20px 0 20px 0;
+
 }
 
 .accordion-faq::before {
@@ -297,10 +372,51 @@
   font-weight: 500;
   font-size: 18px;
   padding: 0 !important;
+  user-select: none;
 }
 
 .accordion-details {
   font-family: var(--secondary-font);
   font-size: 17px;
   padding: 0 !important;
+}
+
+@media screen and (max-width: 950px) {
+  .why-us-table-compare {
+    grid-template-columns: 375px 150px 150px;
+  }
+
+  .feature-text {
+    font-size: 17px;
+    padding: 15px 0 15px 0;
+  }
+
+  .why-us-header {
+    font-size: 21px;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .content-container {
+    width: 100%;
+  }
+
+  .wink-mod-header {
+    font-size: 28px;
+    width: 90%;
+  }
+
+  .wink-mod-description {
+    font-size: 16px;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 530px) {
+  .compare-card {
+    grid-template-columns: 175px 50px 50px;
+  }
 }

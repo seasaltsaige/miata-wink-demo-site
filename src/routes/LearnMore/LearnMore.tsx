@@ -92,10 +92,7 @@ export default function LearnMore() {
           What is a 'Wink Mod?'
         </h1>
         <p className="wink-mod-description">
-          A 'Wink Mod' refers to the ability to wink your Miata's headlights. This means 'blinking' one headlight instead of both.
-          Often times people also include the ability to move the headlights to an arbitrary position, rather than all the way in one direction. This is referred to as 'Sleepy Eye.'
-          Winking is often done by disconnecting one of the headlight connectors, to only allow one headlight to operate normally.
-          While this does achieve the goal of 'Winking' the headlights, this is both inefficient, and dangerous.
+          A 'Wink Mod' lets you wink your Miata's headlights, meaning one headlight blinks while the other stays down. Some mods also offer 'Sleepy Eye,' where headlights stop at a half-open position. Winking is often done by disconnecting a headlight, but this method is inefficient and can be dangerous.
         </p>
       </div>
 
@@ -154,20 +151,45 @@ export default function LearnMore() {
           width > 750 ?
             <div className="why-us-table-compare">
               <h2 className="why-us-header"></h2>
-              <h2 className="why-us-header">Our mod</h2>
-              <h2 className="why-us-header">Other mods</h2>
+              <h2 className="why-us-header ours">Our module</h2>
+              <h2 className="why-us-header others">Other mods</h2>
 
               {
-                comparisons.map(val => <>
-                  <h3 className="feature-text">{val.value}</h3>
-                  <div className="feature-ours">{val.ours === 2 ? <Checkmark /> : val.ours === 1 ? <Questionmark /> : <Xmark />}</div>
-                  <div className="feature-others">{val.others === 2 ? <Checkmark /> : val.others === 1 ? <Questionmark /> : <Xmark />}</div>
+                comparisons.map((val, i) => <>
+                  <h3 key={i + 1} className={`feature-text ${i === 0 ? "init" : ""}`}>{val.value}</h3>
+                  <div key={(i + 1) * 2} className={`feature-ours ${i === 0 ? "init" : ""}`}>{val.ours === 2 ? <Checkmark /> : val.ours === 1 ? <Questionmark /> : <Xmark />}</div>
+                  <div key={(i + 1) * 3} className={`feature-others ${i === 0 ? "init" : ""}`}>{val.others === 2 ? <Checkmark /> : val.others === 1 ? <Questionmark /> : <Xmark />}</div>
+
                 </>)
               }
             </div>
             :
             <div className="why-us-table">
-              {comparisons.map(() => <></>)}
+              <div className="compare-card">
+                <h2 className="comparison-header"></h2>
+                <h2 className="comparison-header ours">Ours</h2>
+                <h2 className="comparison-header others">Others</h2>
+              </div>
+              {
+                comparisons.map((comp, i) =>
+                  <div key={i} className="compare-card">
+                    <h2 className="compare-value">
+                      {comp.value}
+                    </h2>
+                    <div className="compare-has">
+                      {
+                        comp.ours === 2 ? <Checkmark /> : comp.ours === 1 ? <Questionmark /> : <Xmark />
+                      }
+                    </div>
+
+                    <div className="compare-has">
+                      {
+                        comp.others === 2 ? <Checkmark /> : comp.others === 1 ? <Questionmark /> : <Xmark />
+                      }
+                    </div>
+                  </div>
+                )
+              }
             </div>
 
         }
