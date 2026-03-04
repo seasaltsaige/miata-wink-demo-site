@@ -47,7 +47,7 @@ export default function TermsOfUse() {
         6. Returns and Refunds
       </h2>
       <p>
-        If you are not satisfied with the Wink Mod, you may return it within 30 days of receipt for a full refund, provided the product is in its original condition and packaging. Miata Tech reserves the right to refuse returns that do not meet these criteria.
+        If you are not satisfied with the Wink Mod, you may return it within 7 days of receipt for a full refund, provided the product is in its original condition and packaging. Miata Tech reserves the right to refuse returns that do not meet these criteria.
       </p>
       <h2>
         7. Changes to Terms
@@ -59,7 +59,7 @@ export default function TermsOfUse() {
         8. Governing Law
       </h2>
       <p>
-        These Terms shall be governed by and construed in accordance with the laws of California. Any disputes arising from or relating to these Terms or the Wink Mod shall be subject to the exclusive jurisdiction of the courts of [your state/country].
+        These Terms shall be governed by and construed in accordance with the laws of California. Any disputes arising from or relating to these Terms or the Wink Mod shall be subject to the exclusive jurisdiction of the courts of the United States.
       </p>
       <h2>
         9. Contact Information

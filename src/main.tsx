@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
@@ -10,6 +10,22 @@ import LearnMore from './routes/LearnMore/LearnMore.tsx';
 import Footer from './components/Footer/Footer.tsx';
 import TermsOfUse from './routes/TermsOfUse/TermsOfUse.tsx';
 import Home from './routes/Home/Home.tsx';
+import InstallationGuide from './routes/Installation/InstallationGuide.tsx';
+import { NavScreen } from './components/NavScreen/NavScreen.tsx';
+
+
+const GlobalNavbarFooter = ({ element }: { element: React.ReactNode }) => {
+  const [navOpen, setNavOpen] = useState(false);
+  return <>
+    <NavScreen navOpen={navOpen} setNavOpen={setNavOpen} />
+
+    <Navbar setNavOpen={setNavOpen} />
+    {element}
+    <Footer />
+
+  </>
+}
+
 
 const router = createBrowserRouter([
   {
@@ -19,44 +35,52 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <>
-      <Navbar />
-      <Home />
-      <Footer />
+      <GlobalNavbarFooter
+        element={<Home />}
+      />
     </>
 
   },
   {
     path: '/gallery',
     element: <>
-      <Navbar />
-      <Gallery />
-      <Footer />
+      <GlobalNavbarFooter
+        element={<Gallery />}
+      />
     </>
   },
   {
     path: '/contact',
     element: <>
-      <Navbar />
-      <Contact />
-      <Footer />
+      <GlobalNavbarFooter
+        element={<Contact />}
+      />
     </>
   },
   {
     path: '/info',
     element: <>
-      <Navbar />
-      <LearnMore />
-      <Footer />
+      <GlobalNavbarFooter
+        element={<LearnMore />}
+      />
     </>
   },
   {
     path: '/terms',
     element: <>
-      <Navbar />
-      <TermsOfUse />
-      <Footer />
+      <GlobalNavbarFooter
+        element={<TermsOfUse />}
+      />
     </>
   },
+  {
+    path: '/install',
+    element: <>
+      <GlobalNavbarFooter
+        element={<InstallationGuide />}
+      />
+    </>
+  }
 
 ])
 

@@ -1,0 +1,108 @@
+.nav-blur-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(148, 149, 152, 0.1);
+    border-color: #d0d0d0;
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+}
+
+.nav-navigation-content {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgb(250, 250, 250);
+    height: 100%;
+    transform: translateX(-100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.315); */
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-navigation-content.nav-open {
+    animation: 500ms forwards slide-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.nav-navigation-links {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+    row-gap: 20px;
+    margin-top: 20px;
+    width: 90%;
+
+}
+
+
+.nav-navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 8px;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-navigation-button:hover {
+    color: #800020;
+}
+
+.nav-navigation-button.nav-current {
+    background-color: #ececec;
+    border-radius: 6px;
+}
+
+.nav-chevron-right {
+    font-size: 1.75em !important;
+}
+
+/* 
+.nav-item {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(224, 217, 229);
+    transition: 0.25s ease;
+    font-family: var(--main-font);
+} */
+
+
+.nav-footer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.nav-footer-item {
+    /* width: 20px; */
+    /* height: 20px; */
+    font-size: 1.75rem !important;
+    cursor: pointer;
+}
+
+/* .nav-item:hover {
+    color: #800020;
+    border-bottom: 1px solid #800020;
+} */

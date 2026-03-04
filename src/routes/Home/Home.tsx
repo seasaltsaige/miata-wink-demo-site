@@ -32,12 +32,15 @@ function Home() {
           <h1 className='cta-header-top'><strong>Upgrade</strong> your Miata's <strong>Style</strong></h1>
           {width > 750 ? <br /> : ""}
           <h1 className='cta-header-bottom'>with<span key={curr} className='cta-header-cycle'> {features[curr][0]} <strong>{features[curr][1]}</strong></span> Wink Mod</h1>
-          <div className='cta-button-container'>
-            <Link className='cta-button' to="/info">Learn More <RightArrow /> </Link>
-            {/* <Link className='cta-button' to="/gallery">See it in Action <RightArrow /> </Link> */}
-            {/* <Link className='cta-button' to="/contact">Get a Quote<RightArrow /> </Link> */}
-          </div>
+          {width > 750 ? <br /> : ""}
+          <Link className='cta-button' to="/info">
+            Learn More
+            {/* <RightArrow /> */}
+          </Link>
+          {/* <Link className='cta-button' to="/gallery">See it in Action <RightArrow /> </Link> */}
+          {/* <Link className='cta-button' to="/contact">Get a Quote<RightArrow /> </Link> */}
         </div>
+
         <p className='temp-video-notice'>
           Temporary, example video footage found here: <br />
           <strong><a href="https://www.youtube.com/watch?v=kBX6aGvIQJU" target='_blank'>https://www.youtube.com/watch?v=kBX6aGvIQJU</a></strong>

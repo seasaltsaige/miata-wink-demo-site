@@ -102,7 +102,7 @@ export default function LearnMore() {
         </h1>
         <div className="install-brief">
           <div className="plug-and-play-img">
-            <img src="/lear_more_connector.jpg" alt="Plug and Play Connectors" />
+            <img src="/learn_more_connector.webp" alt="Plug and Play Connectors" />
           </div>
           <div className="plug-and-play-container">
             <h2 className="install-in-minutes">
@@ -112,8 +112,8 @@ export default function LearnMore() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptas, officia suscipit provident corporis atque architecto molestiae vel nisi ex quasi cum quos rerum at voluptatibus odio modi tempore vero.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse incidunt reprehenderit quasi omnis suscipit aliquam explicabo id sapiente nihil, quis rerum atque, mollitia autem ullam eaque provident doloremque repellendus?
             </p>
-            <Link className="cta-button-info" to="/gallery">
-              See it in action <RightArrow />
+            <Link className="cta-button-info" to="/install">
+              Installation Guide <RightArrow />
             </Link>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function LearnMore() {
             </div>
           </div>
           <div className="app-image-container">
-            <img src="/learn_more_app_image.jpg" alt="App Image" />
+            <img src="/learn_more_app_image.webp" alt="App Image" />
           </div>
 
         </div>
