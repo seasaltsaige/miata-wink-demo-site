@@ -19,20 +19,26 @@ export function NavScreen(props: {
 }) {
     const [location, setLocation] = useState("/");
 
+    const close = () => {
+        document.getElementById("root")?.classList.remove("no-scroll");
+        props.setNavOpen(false);
+    }
+
     useEffect(() => {
         setLocation(window.location.pathname);
         // window.scrollTo(0, 0);
     }, [window.location.pathname]);
 
     return (
+        // Oops, need to prevent scroll when open lol
         props.navOpen ?
-            <div className="nav-blur-background" onClick={() => props.setNavOpen(false)}>
+            <div className="nav-blur-background" onClick={close}>
                 <div className={`nav-navigation-content${props.navOpen ? " nav-open" : ""}`} onClick={(ev) => ev.stopPropagation()} >
                     <div className="nav-navigation-links">
                         {
                             NAV_MAP.map((({ display, nav }) =>
                                 <Link
-                                    onClick={() => props.setNavOpen(false)}
+                                    onClick={close}
                                     className={`nav-navigation-button${location === nav ? " nav-current" : ""}`}
                                     to={nav}>
                                     {display}

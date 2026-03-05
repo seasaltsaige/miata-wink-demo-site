@@ -19,7 +19,7 @@ export default function Navbar(props: {
   return (
     <>
       <nav className="navbar" role="navigation">
-        <div onClick={() => props.setNavOpen(true)} className="nav-navigation-container">
+        <div onClick={() => { props.setNavOpen(true); document.getElementById("root")?.classList.add("no-scroll"); }} className="nav-navigation-container">
           <MenuRoundedIcon className="nav-navigation-menu" />
           <p className="nav-navigation-text">Menu</p>
         </div>
