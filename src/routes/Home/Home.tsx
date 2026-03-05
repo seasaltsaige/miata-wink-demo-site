@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import RightArrow from "../../assets/RightArrow.svg";
 import './Home.css'
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { useEffect, useState } from 'react';

@@ -42,6 +42,7 @@
 .nav-navigation-links {
     display: flex;
     flex-direction: column;
+    user-select: none;
     /* align-items: center; */
     justify-content: flex-start;
     row-gap: 20px;
@@ -55,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 7px;
+    padding: 15px;
     padding-left: 15px;
     padding-right: 8px;
     font-family: var(--main-font);
@@ -64,8 +65,22 @@
     color: black;
 }
 
+@keyframes fade-in {
+    0% {
+        color: black;
+        background-color: white;
+        border-radius: 6px;
+    }
+
+    100% {
+        color: #800020;
+        background-color: #ececec;
+        border-radius: 6px;
+    }
+}
+
 .nav-navigation-button:hover {
-    color: #800020;
+    animation: 0.2s both fade-in;
 }
 
 .nav-navigation-button.nav-current {

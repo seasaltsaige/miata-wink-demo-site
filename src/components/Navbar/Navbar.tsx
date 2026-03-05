@@ -1,8 +1,7 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 import "./Navbar.css";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { useEffect, useState } from "react";
 
 export default function Navbar(props: {
@@ -11,7 +10,6 @@ export default function Navbar(props: {
   const navigate = useNavigate();
   // const navigation = useNavigation();
   const [location, setLocation] = useState("/");
-  const { width } = useWindowDimensions();
 
   useEffect(() => {
     setLocation(window.location.pathname);

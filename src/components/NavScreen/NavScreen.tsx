@@ -26,12 +26,11 @@ export function NavScreen(props: {
 
     return (
         props.navOpen ?
-            <div className="nav-blur-background">
-                <div className={`nav-navigation-content${props.navOpen ? " nav-open" : ""}`}>
+            <div className="nav-blur-background" onClick={() => props.setNavOpen(false)}>
+                <div className={`nav-navigation-content${props.navOpen ? " nav-open" : ""}`} onClick={(ev) => ev.stopPropagation()} >
                     <div className="nav-navigation-links">
                         {
                             NAV_MAP.map((({ display, nav }) =>
-
                                 <Link
                                     onClick={() => props.setNavOpen(false)}
                                     className={`nav-navigation-button${location === nav ? " nav-current" : ""}`}
@@ -39,53 +38,8 @@ export function NavScreen(props: {
                                     {display}
                                     <ChevronRightRounded className="nav-chevron-right" />
                                 </Link>
-
-                                // <ChevronRightRounded className="" />
-                                // </div>
                             ))
                         }
-
-                        {/* <div className="nav-navigation-button">
-                            <Link
-                                onClick={() => props.setNavOpen(false)}
-                                className="nav-item" to={"/"}>
-                                Home
-                            </Link>
-
-                            <ChevronRightRounded />
-
-                        </div>
-
-                        <div className="nav-navigation-button">
-                            <Link
-                                onClick={() => props.setNavOpen(false)}
-                                className="nav-item" to={"/"}>
-                                Learn More
-                            </Link>
-                        </div>
-                        <div className="nav-navigation-button">
-                            <Link
-                                onClick={() => props.setNavOpen(false)}
-                                className="nav-item" to={"/"}>
-                                Installation
-                            </Link>
-                        </div>
-
-                        <div className="nav-navigation-button">
-                            <Link
-                                onClick={() => props.setNavOpen(false)}
-                                className="nav-item" to={"/"}>
-                                How it Works
-                            </Link>
-                        </div>
-
-                        <div className="nav-navigation-button">
-                            <Link
-                                onClick={() => props.setNavOpen(false)}
-                                className="nav-item" to={"/"}>
-                                Contact Us
-                            </Link>
-                        </div> */}
 
                     </div>
 
@@ -94,13 +48,7 @@ export function NavScreen(props: {
                         <GitHub onClick={() => window.open("https://github.com/seasaltsaige/openwink")} className="nav-footer-item" />
                         <Mail onClick={() => window.open("mailto:saige.sloan1@gmail.com")} className="nav-footer-item" />
                     </div>
-                    {/* Map nav items here */}
-                    {/* If current page is selected */}
-                    {/* Highlight it */}
                 </div>
-
-                {/* Footer linked to linked in, github */}
-                {/* and maybe mail as footer, not sure */}
             </div>
             : <></>
     )
