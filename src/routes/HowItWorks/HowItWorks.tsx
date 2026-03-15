@@ -59,7 +59,7 @@ export default function HowItWorks() {
 
                 <section className="flow-list">
 
-                    {steps.map((step, idx) => (
+                    {steps.map((step) => (
                         <article key={step.label} className="flow-row">
                             <div className="flow-step">
                                 <span className="step-pill">{step.label}</span>
