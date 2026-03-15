@@ -33,11 +33,11 @@
 }
 
 .footer-quick-link {
-  color: #800020;
+  color: var(--accent-color);
   font-family: var(--secondary-font);
   font-weight: bold;
 }
 
 .footer-quick-link:hover {
-  color: #b7002e;
+  color: var(--accent-color);
 }

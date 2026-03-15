@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 import "./Navbar.css";
@@ -8,28 +8,31 @@ export default function Navbar(props: {
   setNavOpen: React.Dispatch<React.SetStateAction<boolean>>
 }) {
   const navigate = useNavigate();
-  // const navigation = useNavigation();
-  const [location, setLocation] = useState("/");
+  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const isHomeRoute = location.pathname === "/";
 
   useEffect(() => {
-    setLocation(window.location.pathname);
-    window.scrollTo(0, 0);
-  }, [window.location.pathname]);
+    const onScroll = () => setIsScrolled(window.scrollY > 10);
+    if (isHomeRoute) {
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+    } else {
+      setIsScrolled(true);
+    }
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHomeRoute]);
 
   return (
     <>
-      <nav className="navbar" role="navigation">
+      <nav className={isScrolled && !isHomeRoute ? "navbar navbar-scrolled" : "navbar"} role="navigation">
         <div onClick={() => { props.setNavOpen(true); document.getElementById("root")?.classList.add("no-scroll"); }} className="nav-navigation-container">
           <MenuRoundedIcon className="nav-navigation-menu" />
           <p className="nav-navigation-text">Menu</p>
         </div>
 
         <div className="logo-container" onClick={() => { props.setNavOpen(false); navigate("/") }} >
-          {
-            // width > 800 ?
-            //   <img className="nav-logo" src="/logo.webp" alt="Shybeams Logo" />
-            //   : <></>
-          }
           <h1 className="company-name">Open Wink</h1>
         </div>
 
@@ -39,7 +42,7 @@ export default function Navbar(props: {
 
       </nav>
       {
-        (location !== "/") ?
+        (!isHomeRoute) ?
           <div className="navbar-spacer"></div>
           : <></>
       }

@@ -3,10 +3,10 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(148, 149, 152, 0.1);
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.6);
     border-color: #d0d0d0;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(32px);
     z-index: 1001;
     overflow: clip;
 }
@@ -15,17 +15,47 @@
     width: 80%;
     max-width: 500px;
     background-color: rgb(250, 250, 250);
-    height: 100%;
+    height: 100dvh;
     transform: translateX(-100%);
-
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.315); */
     border-right: 2px solid rgba(0, 0, 0, 0.1);
-    overflow-y: scroll;
+    overflow:visible
 }
+
+.nav-close-button {
+    position: absolute;
+    top: 20px;
+    right: -80px;
+    padding: 10px;
+    width: 35px !important;
+    height: 35px !important;
+    z-index: 55555;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+} 
+
+.nav-close-button:hover {
+    animation: 0.3s both back;
+}
+
+@keyframes back {
+    0% {
+        background-color: transparent;
+        backdrop-filter: none;
+    }
+    100% {
+        background-color: rgba(174, 174, 174, 0.2);
+        backdrop-filter: blur(30px);
+    }
+}
+
+
 
 .nav-navigation-content.nav-open {
     animation: 500ms forwards slide-in;
@@ -75,7 +105,7 @@
     }
 
     100% {
-        color: #800020;
+        color: var(--accent-color);
         background-color: #ececec;
         border-radius: 6px;
     }
@@ -94,15 +124,6 @@
     font-size: 1.75em !important;
 }
 
-/* 
-.nav-item {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(224, 217, 229);
-    transition: 0.25s ease;
-    font-family: var(--main-font);
-} */
-
 
 .nav-footer {
     width: 50%;
@@ -114,13 +135,33 @@
 }
 
 .nav-footer-item {
-    /* width: 20px; */
-    /* height: 20px; */
     font-size: 1.75rem !important;
     cursor: pointer;
 }
 
-/* .nav-item:hover {
-    color: #800020;
-    border-bottom: 1px solid #800020;
-} */
+
+.nav-footer-item:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    color: #0072B1;
+}
+
+.nav-footer-item:nth-child(1):hover {
+    color: #004a75;
+}
+
+.nav-footer-item:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    color: #2b2b2b;
+}
+
+.nav-footer-item:nth-child(2):hover {
+    color: #111;
+}
+
+.nav-footer-item:nth-child(3) {
+    width: 30px;
+    height: 30px;
+
+}

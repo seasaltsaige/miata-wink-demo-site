@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import "./NavScreen.css";
 import { Link } from "react-router-dom";
-import { ChevronRightRounded, GitHub, LinkedIn, Mail } from "@mui/icons-material";
+import { ChevronRightRounded, CloseRounded, GitHub, LinkedIn, Mail } from "@mui/icons-material";
 
 const NAV_MAP: { nav: string, display: string }[] = [
     { display: "Home", nav: "/" },
@@ -34,6 +34,7 @@ export function NavScreen(props: {
         props.navOpen ?
             <div className="nav-blur-background" onClick={close}>
                 <div className={`nav-navigation-content${props.navOpen ? " nav-open" : ""}`} onClick={(ev) => ev.stopPropagation()} >
+                    <CloseRounded onClick={close} className="nav-close-button" />
                     <div className="nav-navigation-links">
                         {
                             NAV_MAP.map((({ display, nav }) =>

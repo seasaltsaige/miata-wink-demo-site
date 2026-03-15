@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer.tsx';
 import TermsOfUse from './routes/TermsOfUse/TermsOfUse.tsx';
 import Home from './routes/Home/Home.tsx';
 import InstallationGuide from './routes/Installation/InstallationGuide.tsx';
+import HowItWorks from './routes/HowItWorks/HowItWorks.tsx';
 import { NavScreen } from './components/NavScreen/NavScreen.tsx';
 
 
@@ -78,6 +79,14 @@ const router = createBrowserRouter([
     element: <>
       <GlobalNavbarFooter
         element={<InstallationGuide />}
+      />
+    </>
+  },
+  {
+    path: '/function',
+    element: <>
+      <GlobalNavbarFooter
+        element={<HowItWorks />}
       />
     </>
   }

@@ -70,8 +70,8 @@
 
 .contact-item:hover>a,
 .contact-item:hover>svg {
-  color: #b7002e;
-  fill: #b7002e;
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contact-form-wrapper {
@@ -131,7 +131,7 @@
 .main-input:focus,
 .main-input:active {
   outline: none !important;
-  border: 2px solid #cd0436;
+  border: 2px solid var(--accent-color);
   border-radius: 2px;
 }
 
@@ -163,7 +163,7 @@
 
 .form-submit {
   width: 100%;
-  background-color: #800020;
+  background-color: var(--accent-color);
   color: white;
   font-family: var(--main-font);
   font-size: 16px;
@@ -178,11 +178,11 @@
 
 
 .form-submit:hover {
-  background-color: #a30029;
+  background-color: var(--accent-color);
 }
 
 .form-submit:active {
-  background-color: #cd0436;
+  background-color: var(--accent-color);
 }
 
 
@@ -243,7 +243,7 @@
   width: 100%;
   border: none;
   border-radius: 0;
-  background-color: #800020;
+  background-color: var(--accent-color);
   color: white;
   font-family: var(--secondary-font);
   font-size: 15px;

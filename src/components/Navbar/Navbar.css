@@ -8,8 +8,15 @@
   left: 0;
   height: calc(var(--nav-height) - 1px);
   background-image: linear-gradient(rgba(0, 0, 0, 0.515) 0%, transparent 60%);
-  border-bottom: 1px solid rgba(97, 97, 97, 0.46);
+    border-bottom: 1px solid rgba(97, 97, 97, 0.46);
   z-index: 1000;
+  transition: background-color 0 ease, border-bottom-color 0 ease, box-shadow 0 ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
 .navbar>* {

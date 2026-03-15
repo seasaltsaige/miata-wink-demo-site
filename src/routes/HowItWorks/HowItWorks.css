@@ -1,0 +1,134 @@
+.how-page {
+  width: 100%;
+  /* min-height: calc(100vh - 110px); */
+  display: flex;
+  justify-content: center;
+  background: #f4f4f4;
+  padding: 28px 12px 42px;
+}
+
+.hero-panel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e4e4e4;
+  gap: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-card {
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.hero-card h3 {
+    margin: 0 0 6px;
+    font-family: var(--main-font);
+    font-size: 1.3rem;
+}
+
+.hero-card ul { 
+    margin: 0; 
+    padding-inline-start: 18px; 
+}
+.hero-card li { 
+    font-family: var(--secondary-font); 
+    margin-top: 4px;
+}
+
+.flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flow-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px;
+}
+
+.flow-step h2 { 
+    /* text-transform: capitalize; */
+    margin: 6px 0 4px; 
+    font-size: 1.1rem; 
+    font-family: var(--secondary-font);
+}
+
+.flow-step p { 
+    margin: 0; 
+    line-height: 1.45; 
+    font-size: 0.95rem;
+    font-family: var(--secondary-font); 
+}
+
+.step-pill {
+    text-transform: capitalize;
+  font-family: var(--main-font);
+  /* background: #f5f5f5; */
+  color: var(--accent-color);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  /* padding: 4px 10px; */
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+
+.flow-image-wrap {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-image-wrap > img {
+    max-width: 500px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.how-block {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 14px;
+  background: #fcfcfc;
+}
+
+.how-block h2 { 
+    margin-top: 0; 
+    font-family: var(--main-font);
+}
+
+.how-block p {
+    /* margin: 6px 0 12px; */
+    /* color: #444; */
+    font-family: var(--secondary-font);
+}
+
+@media screen and (max-width: 900px) {
+  .hero-panel,
+  .flow-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    align-self: center;
+    justify-self: center;
+  }
+}

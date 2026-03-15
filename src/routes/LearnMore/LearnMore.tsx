@@ -1,9 +1,9 @@
+import "../shared/cta.css";
 import "./LearnMore.css";
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Down from "../../assets/down.svg";
-import RightArrow from "../../assets/RightArrow.svg";
 import GetOnAppStore from "../../assets/GetOnAppStore.svg";
 import GetOnGooglePlay from "../../assets/GetOnGooglePlay.svg";
 import Checkmark from "../../assets/Checkmark.svg";
@@ -23,7 +23,7 @@ const qas = [
   ],
   [
     "How much does the Wink Mod cost?",
-    "The base model starts at $125, with customization options available to be made, by request."
+    "The base model starts at $TBD, with customization options available to be made, by request."
   ],
   [
     "Can I request customization of the app and/or module?",
@@ -42,6 +42,10 @@ const qas = [
     "Yes. The OEM headlight button will still function as normal. Along with additional double and triple press actions."
   ],
   [
+    "Is it compatible with the flash to pass mod?",
+    "Yes, the wink mod is compatible with the flash to pass mod; you will just need to ensure that the setting is enabled in the app to ensure the module knows it is installed.",
+  ],
+  [
     "How is the Wink Mod powered?",
     "The wink mod is powered directly by the 12V rail that powers the headlight motors. The module often goes to sleep when not being used, only periodically waking to attempt to connect to your phone."
   ],
@@ -51,24 +55,13 @@ const qas = [
   ],
   [
     "Can I customize the wink speed or behavior?",
-    "Wink speed is proportional to the Voltage that is delivered to the headlight motor. While the car is on, it will be slightly faster than while it is off. As for behavior, there are custom presets that you can create to have saved sequences!"
+    "Wink speed is proportional to the Voltage that is delivered to the headlight motor. While the car is on, it will be slightly faster than while it is off. Behavior can be modified with custom presets which can be created to have saved sequences."
   ],
   [
-    "What if I want to remove the mod later — will it leave any permanent changes?",
+    "What if I want to remove the mod later, will it leave any permanent changes?",
     "Since this mod is entirely plug and play, there are no modifications made to the cars wiring harness, meaning it is able to revert to OEM condition."
   ],
-]
-
-const QA = ({ question, answer }: { question: string, answer: string }) => {
-  return <Accordion className="accordion-faq">
-    <AccordionSummary className="accordion-header" expandIcon={<Down />} >
-      {question}
-    </AccordionSummary>
-    <AccordionDetails className="accordion-details">
-      {answer}
-    </AccordionDetails>
-  </Accordion>
-}
+];
 
 const comparisons = [
   { value: "High quality, high temp rated materials", ours: 2, others: 1 },
@@ -78,56 +71,102 @@ const comparisons = [
   { value: "Frequent updates to both wink module and app", ours: 2, others: 0 },
   { value: "Color customization for casing and wiring", ours: 2, others: 0 },
   { value: "Competitive pricing", ours: 2, others: 0 },
-]
+];
 
+const featureCards = [
+  {
+    title: 'Plug and play installation',
+    description: 'No wire splicing or permanent modifications connect directly to your existing headlight harness.',
+  },
+  {
+    title: 'Full manual headlight compatibility',
+    description: 'OEM headlight controls still work perfectly with wink and sleep eye modes enabled.',
+  },
+  {
+    title: 'Custom presets and auto updates',
+    description: 'Save wink sequences, set sleep eye speed, and update firmware from the phone app.',
+  },
+  {
+    title: 'Safe and reliable',
+    description: 'Cased, temperature-rated module with surge protection and stable Bluetooth connection.',
+  },
+];
+
+const steps = [
+  { label: '1. Plug in', detail: 'Connect the module directly to the headlight motor connectors and 12V power line.' },
+  { label: '2. Install app', detail: 'Download the app from Google Play or App Store and pair with your module.' },
+  { label: '3. Wink and create', detail: 'Use one click wink actions or create custom sequences.' },
+];
+
+const QA = ({ question, answer }: { question: string; answer: string }) => {
+  return (
+    <Accordion className="accordion-faq">
+      <AccordionSummary className="accordion-header" expandIcon={<Down />}>
+        {question}
+      </AccordionSummary>
+      <AccordionDetails className="accordion-details">{answer}</AccordionDetails>
+    </Accordion>
+  );
+};
 
 export default function LearnMore() {
-
   const { width } = useWindowDimensions();
 
-  return <div className="learn-more-page">
-    <div className="content-container">
-      <div className="what-is-it">
-        <h1 className="wink-mod-header">
-          What is a 'Wink Mod?'
-        </h1>
-        <p className="wink-mod-description">
-          A 'Wink Mod' lets you wink your Miata's headlights, meaning one headlight blinks while the other stays down. Some mods also offer 'Sleepy Eye,' where headlights stop at a half-open position. Winking is often done by disconnecting a headlight, but this method is inefficient and can be dangerous.
-        </p>
-      </div>
-
-      <div className="how-it-works">
-        <h1 className="wink-mod-header">
-          How the Wink Mod works
-        </h1>
-        <div className="install-brief">
-          <div className="plug-and-play-img">
-            <img src="/learn_more_connector.webp" alt="Plug and Play Connectors" />
-          </div>
-          <div className="plug-and-play-container">
-            <h2 className="install-in-minutes">
-              Install in minutes
-            </h2>
-            <p className="plug-and-play-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptas, officia suscipit provident corporis atque architecto molestiae vel nisi ex quasi cum quos rerum at voluptatibus odio modi tempore vero.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse incidunt reprehenderit quasi omnis suscipit aliquam explicabo id sapiente nihil, quis rerum atque, mollitia autem ullam eaque provident doloremque repellendus?
+  return (
+    <div className="learn-more-page">
+      <div className="content-container">
+        <section className="hero-panel">
+          <div className="hero-content">
+            <p className="eyebrow">Miata Wink Mod</p>
+            <h1>Wink your headlights with confidence.</h1>
+            <p className="hero-copy">
+              The easiest plug and play module that supports NA Miata popup headlights, giving you winks, sleepy eye,
+              custom sequences, and a modern app without changing OEM control behavior.
             </p>
-            <Link className="cta-button-info" to="/install">
-              Installation Guide <RightArrow />
-            </Link>
+            <div className="hero-buttons">
+              <Link to="/install" className="cta-button-shared primary">Installation Guide</Link>
+              <Link to="/contact" className="cta-button-shared ghost">Get support</Link>
+            </div>
           </div>
-        </div>
-        <div className="application-brief">
-          <div className="app-container">
-            <h2 className="app-compatibility">
-              Works on iOS and Android
-            </h2>
-            <p className="app-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptas, officia suscipit provident corporis atque architecto molestiae vel nisi ex quasi cum quos rerum at voluptatibus odio modi tempore vero.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse incidunt reprehenderit quasi omnis suscipit aliquam explicabo id sapiente nihil, quis rerum atque, mollitia autem ullam eaque provident doloremque repellendus?
+          <div className="hero-image-wrap">
+            <img className="hero-image-wrap-img" src="/learn_more_app_image.webp" alt="Wink Mod app" />
+          </div>
+        </section>
+
+        <br />
+        <section className="feature-grid">
+          {featureCards.map((card, index) => (
+            <article className="feature-card" key={index}>
+              <p className="feature-label">{card.title}</p>
+              <p className="feature-detail">{card.description}</p>
+            </article>
+          ))}
+        </section>
+        <br />
+
+        <section className="section-block">
+          <div className="section-head">
+            <h2>Quick Start</h2>
+            <p>Install in minutes; start winking using your phone in seconds.</p>
+          </div>
+          <div className="steps-grid">
+            {steps.map((step) => (
+              <div className="step-card" key={step.label}>
+                <div className="step-badge">{step.label}</div>
+                <p>{step.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="section-block split-block">
+          <div className="split-left">
+            <h2>Works on iOS and Android</h2>
+            <p>
+              Use the app to pair to your module and control wink, sleepy eye, or custom preset sequences. Auto-connect
+              and firmware updates are built in.
             </p>
             <div className="install-container">
-              {/* TODO: Update links with actual app links when app is uploaded to app stores */}
               <a href="https://play.google.com/store/games?hl=en_US">
                 <GetOnGooglePlay />
               </a>
@@ -136,83 +175,51 @@ export default function LearnMore() {
               </a>
             </div>
           </div>
-          <div className="app-image-container">
-            <img src="/learn_more_app_image.webp" alt="App Image" />
+
+
+          <div className="split-right">
+            <img src="/learn_more_connector.webp" alt="Wink Mod app" />
           </div>
+        </section>
 
-        </div>
-      </div>
-
-      <div className="why-us">
-        <h1 className="wink-mod-header why-choose-us-header">
-          Why choose us?
-        </h1>
-        {
-          width > 750 ?
+        <section className="section-block">
+          <h2 className="section-title">Why Choose Us?</h2>
+          {width > 760 ? (
             <div className="why-us-table-compare">
-              <h2 className="why-us-header"></h2>
-              <h2 className="why-us-header ours">Our module</h2>
-              <h2 className="why-us-header others">Other mods</h2>
-
-              {
-                comparisons.map((val, i) => <>
-                  <h3 key={i + 1} className={`feature-text ${i === 0 ? "init" : ""}`}>{val.value}</h3>
-                  <div key={(i + 1) * 2} className={`feature-ours ${i === 0 ? "init" : ""}`}>{val.ours === 2 ? <Checkmark /> : val.ours === 1 ? <Questionmark /> : <Xmark />}</div>
-                  <div key={(i + 1) * 3} className={`feature-others ${i === 0 ? "init" : ""}`}>{val.others === 2 ? <Checkmark /> : val.others === 1 ? <Questionmark /> : <Xmark />}</div>
-
-                </>)
-              }
+              <div className="why-table-header">Feature</div>
+              <div className="why-table-header">Ours</div>
+              <div className="why-table-header">Others</div>
+              {comparisons.map((val, i) => (
+                <>
+                  <div key={`f-${i}`} className="feature-text">{val.value}</div>
+                  <div key={`o-${i}`} className="feature-check">{val.ours === 2 ? <Checkmark /> : val.ours === 1 ? <Questionmark /> : <Xmark />}</div>
+                  <div key={`t-${i}`} className="feature-check">{val.others === 2 ? <Checkmark /> : val.others === 1 ? <Questionmark /> : <Xmark />}</div>
+                </>
+              ))}
             </div>
-            :
+          ) : (
             <div className="why-us-table">
-              <div className="compare-card">
-                <h2 className="comparison-header"></h2>
-                <h2 className="comparison-header ours">Ours</h2>
-                <h2 className="comparison-header others">Others</h2>
-              </div>
-              {
-                comparisons.map((comp, i) =>
-                  <div key={i} className="compare-card">
-                    <h2 className="compare-value">
-                      {comp.value}
-                    </h2>
-                    <div className="compare-has">
-                      {
-                        comp.ours === 2 ? <Checkmark /> : comp.ours === 1 ? <Questionmark /> : <Xmark />
-                      }
-                    </div>
-
-                    <div className="compare-has">
-                      {
-                        comp.others === 2 ? <Checkmark /> : comp.others === 1 ? <Questionmark /> : <Xmark />
-                      }
-                    </div>
+              {comparisons.map((comp, i) => (
+                <div key={i} className="compare-card">
+                  <div>
+                    <p className="compare-value">{comp.value}</p>
                   </div>
-                )
-              }
+                  <div className="compare-has">{comp.ours === 2 ? <Checkmark /> : comp.ours === 1 ? <Questionmark /> : <Xmark />}</div>
+                </div>
+              ))}
             </div>
+          )}
+        </section>
 
-        }
+        <section className="section-block faq-section">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="questions-and-answers">
+            {qas.map((val, i) => (
+              <QA question={val[0]} answer={val[1]} key={`qa-${i}`} />
+            ))}
+          </div>
+        </section>
       </div>
-
-      <div className="customization-options">
-
-      </div>
-
-      <div className="faq-section">
-        <h1 className="wink-mod-header">
-          Frequently asked questions
-        </h1>
-        <div className="questions-and-answers">
-          {
-            qas.map((val, i) =>
-              <QA question={val[0]} answer={val[1]} key={i} />
-            )
-          }
-        </div>
-
-      </div>
-
     </div>
-  </div>
+  );
 }

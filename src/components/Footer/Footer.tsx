@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return <div className="footer">
-    <p className="footer-item">© 2024 Miata Tech Wink Mod</p>
+    <p className="footer-item">© 2026 Miata Tech Wink Mod</p>
     <p className="footer-item">Website Designed and Maintained by <a href="https://github.com/seasaltsaige" target="_blank">@seasaltsaige</a></p>
     <div className="footer-nav">
       <Link className="footer-quick-link" to="/info">Learn More</Link>

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 3px 3px 1px #800020;
+  text-shadow: 3px 3px 1px var(--accent-color);
 }
 
 .not-found>h1 {
@@ -25,15 +25,15 @@
 
 .not-found>a {
   text-shadow: none;
-  color: #800020;
+  color: var(--accent-color);
   font-size: 24px;
   font-weight: bold;
 }
 
 .not-found>a:hover {
-  color: #9c0027;
+  color: var(--accent-color);
 }
 
 .not-found>a:active {
-  color: #b2002d;
+  color: var(--accent-color);
 }

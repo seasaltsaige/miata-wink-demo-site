@@ -90,7 +90,7 @@
   }
 }
 
-.cta-button {
+.cta-button-home {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -108,16 +108,16 @@
   margin-top: 20px;
 }
 
-.cta-button:hover,
-.cta-button:active {
+.cta-button-home:hover,
+.cta-button-home:active {
   color: #d0d0d0;
   background-color: rgba(148, 149, 152, 0.1);
   border-color: #d0d0d0;
   backdrop-filter: blur(32px);
 }
 
-.cta-button:hover>.rightarrow,
-.cta-button:active>.rightarrow {
+.cta-button-home:hover>.rightarrow,
+.cta-button-home:active>.rightarrow {
   animation-name: arrowAnimate;
   animation-timing-function: ease-out;
 }
@@ -174,7 +174,7 @@
     margin-top: 20px;
   }
 
-  .cta-button {
+  .cta-button-home {
     font-size: 16px;
   }
 

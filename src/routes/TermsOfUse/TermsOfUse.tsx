@@ -8,7 +8,7 @@ export default function TermsOfUse() {
       </h1>
 
       <h3>
-        Effective Date: 09/15/2024
+        Effective Date: 03/14/2026
       </h3>
       <p>
         Welcome to Miata Tech (the "Website"). These terms and conditions (the "Terms") govern your use of the Website and the purchase and use of the Wink Mod ("Wink Mod"), a plug-and-play accessory that allows you to control your Miata’s headlights through your phone. By accessing or using the Website and/or purchasing the Wink Mod, you agree to these Terms. If you do not agree with these Terms, please do not use the Website or purchase the Wink Mod.

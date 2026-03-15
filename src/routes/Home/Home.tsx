@@ -32,7 +32,7 @@ function Home() {
           {width > 750 ? <br /> : ""}
           <h1 className='cta-header-bottom'>with<span key={curr} className='cta-header-cycle'> {features[curr][0]} <strong>{features[curr][1]}</strong></span> Wink Mod</h1>
           {width > 750 ? <br /> : ""}
-          <Link className='cta-button' to="/info">
+          <Link className='cta-button-home' to="/info">
             Learn More
             {/* <RightArrow /> */}
           </Link>
