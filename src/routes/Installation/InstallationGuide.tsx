@@ -13,68 +13,75 @@ type InstallStep = {
 const installFlowSteps: InstallStep[] = [
   {
     step: "1",
-    title: "Disconnect battery and discharge residual energy",
-    body: "Turn off the car and disconnect the battery. Discharge residual charge by depressing the brakes or honking the horn so wiring is safe before handling connectors.",
+    title: "Disconnect battery and discharge residuals",
+    body: "Turn off the car and disconnect the battery. Discharge residual charge in the wiring harness by depressing the brakes a few times or honking the horn until flat, so the wiring is discharged before handling the connectors.",
     image: "https://placehold.co/420x220?text=Disconnect+Battery",
-    alt: "disconnect battery",
+    alt: "Disconnect Battery",
   },
   {
     step: "2",
     title: "Open hood and locate headlight connectors",
     body: "Find the headlight connectors and confirm both left/right lines are accessible.",
     image: "https://placehold.co/420x220?text=Locate+Connectors",
-    alt: "locate headlight connectors",
+    alt: "Locate Headlight Connectors",
   },
   {
     step: "3",
     title: "Disconnect headlight connectors",
-    body: "Carefully unplug the headlight harness from both headlight modules before wiring the Wink Module.",
+    body: "Carefully unplug the connectors from both headlight motor harnesses before wiring the Wink Module harness.",
   },
   {
     step: "4",
     title: "Mount Wink Module",
-    body: "Secure the module in a TBD location, using zip ties or bracket mounts to secure it away from heat and water. Ensure the wiring can reach both headlight connectors.",
+    body: "Secure the module in a TBD location, using zip ties or mounting hardware to secure it away from heat and water. Ensure the provided wiring can reach both headlight connectors before securing the module.",
     image: "https://placehold.co/420x220?text=Mount+Location",
-    alt: "mount wink module",
+    alt: "Mount Wink Module",
   },
   {
     step: "5",
     title: "Connect headlight connectors to corresponding plugs",
-    body: "Plug left and right headlight connectors into the matching module ports. Keep labels aligned.",
+    body: "Plug both left and right headlight connectors into the corresponding headlight motor harnesses. The 'left' harness connector will be shorter than the 'right' harness connector.",
     images: [
-      { src: "https://placehold.co/200x120?text=Left+Motor", alt: "left headlight plug" },
-      { src: "https://placehold.co/200x120?text=Right+Motor", alt: "right headlight plug" },
+      { src: "https://placehold.co/200x120?text=Left+Motor", alt: "Left Headlight Plug" },
+      { src: "https://placehold.co/200x120?text=Right+Motor", alt: "Right Headlight Plug" },
     ],
   },
   {
     step: "6",
-    title: "Plug connector into module box",
-    body: "Connect the main harness to the module box. Confirm clip locks and has a secure fit before continuing.",
+    title: "Plug main connector into mounted module",
+    body: "Connect the main harness to the module box. Confirm clip locks in place and securely fits before continuing.",
     image: "https://placehold.co/420x220?text=Plugin+Module",
-    alt: "plug connector into module",
+    alt: "Plug Connector Into Module",
   },
   {
     step: "7",
-    title: "Install app and allow services",
-    body: "Download the Open Wink app from your app store and grant Bluetooth/WiFi and location services.",
+    title: "Reconnect battery",
+    body: "Reconnect the car battery to provide power to the newly installed module, allowing it to power on and connect to the app."
   },
   {
     step: "8",
-    title: "Connect to module",
-    body: "Open app, select your module, complete onboarding, and run the first handshake test.",
+    title: "Install app and allow services",
+    body: "Download the TBD app from your corresponding app store and grant Bluetooth and location services. Location services are required for Bluetooth connectivity and proper app function. (Note: the app does not use location data beyond what is required for Bluetooth connectivity.)",
   },
   {
     step: "9",
+    title: "Connect to module",
+    body: "Open the app, scan for the newly installed module, and connect. The app will load the default configuration from the module, and you will be able to start using the Wink Mod features. Refer to the 'How It Works' page for a full walkthrough of app features and configurations.",
+  },
+  {
+    step: "10",
     title: "Wink and customize app",
-    body: "Use the app to test the wink action, set preferences, and enjoy your one-touch controls.",
+    body: "Use the app to test the wink action, set preferences, and enjoy your one press wireless winks. ;)",
+    image: "https://placehold.co/420x220?text=Miata+Winking",
+    alt: "Enjoy Winking",
   },
 ];
 
 const requirements = [
-  "Compatible vehicle with compatible headlight motors. (1989-1997 NA Miata)",
-  "Android tbd+ or iOS tbd+",
-  "Bluetooth Access",
-  "10 to 15 minutes install time",
+  "A compatible vehicle with compatible headlight motors. (1989-1997 NA Miata)",
+  "An Android device running tbd+ or an iOS device running tbd+.",
+  "Bluetooth Access and Location Services enabled on your phone.",
+  "10 to 15 minutes of installation time.",
 ];
 
 export default function InstallationGuide() {
@@ -86,7 +93,7 @@ export default function InstallationGuide() {
             <p className="eyebrow">Install Guide</p>
             <h1>Install Your Wink Module</h1>
             <p className="hero-copy">
-              Follow this step by step guide to install your Wink Module, complete first time setup, and start using the Open Wink mod features safely.
+              Follow this step by step guide to install your new Wink Module, complete setup, and start using the Wink Mod features.
               We keep the process simple and reliable for both first time modders and seasoned DIYers.
             </p>
             <div className="hero-buttons">
@@ -101,8 +108,8 @@ export default function InstallationGuide() {
 
         <section className="section-block">
           <div className="section-head">
-            <h2 id="requirements">What You Need</h2>
-            <p>Before you start, confirm you have these items ready.</p>
+            <h2 id="requirements">What You'll Need</h2>
+            <p>Before you start, confirm you have the following items ready.</p>
           </div>
           <ul className="requirements-list">
             {requirements.map((line) => (
@@ -114,7 +121,7 @@ export default function InstallationGuide() {
         <section id="install-flow" className="section-block">
           <div className="section-head">
             <h2>Installation Instructions</h2>
-            <p>Refer to the following steps. If you need more help, feel free to reach out for more detailed support.</p>
+            <p>Refer to the following steps. If you need additional help, reach out over email for more detailed support.</p>
           </div>
           <div className="install-flow">
             {installFlowSteps.map((step) => (

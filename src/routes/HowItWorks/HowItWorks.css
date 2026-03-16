@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   background: #f4f4f4;
-  padding: 28px 12px 42px;
+  /* padding: 28px 12px 42px; */
 }
 
 .hero-panel {
@@ -27,8 +27,9 @@
 
 .hero-card {
   border-radius: 10px;
-  padding: 12px;
-  margin-bottom: 15px;
+  padding: 22px;
+  padding-left: 10px;
+  /* margin-bottom: 15px; */
 }
 
 .hero-card h3 {
@@ -52,56 +53,73 @@
   gap: 12px;
 }
 
+.flow-list > h1 {
+    margin: 0;
+    font-family: var(--main-font);
+    font-size: 1.9rem;
+}
+
 .flow-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
   align-items: center;
   border: 1px solid #ececec;
   border-radius: 10px;
   background: #fff;
   padding: 20px;
+  min-height: 170px;
 }
 
-.flow-step h2 { 
-    /* text-transform: capitalize; */
-    margin: 6px 0 4px; 
-    font-size: 1.1rem; 
+.flow-row.app-feature-row {
+  grid-template-columns: 1.4fr 0.6fr;
+}
+
+.flow-step h2 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+    font-family: var(--main-font);
+    letter-spacing: -0.02em;
+}
+
+.flow-step p {
+    margin: 0;
+    line-height: 1.55;
+    font-size: 1.02rem;
     font-family: var(--secondary-font);
-}
-
-.flow-step p { 
-    margin: 0; 
-    line-height: 1.45; 
-    font-size: 0.95rem;
-    font-family: var(--secondary-font); 
+    color: #2d2d2d;
+    max-width: 620px;
 }
 
 .step-pill {
     text-transform: capitalize;
   font-family: var(--main-font);
-  /* background: #f5f5f5; */
   color: var(--accent-color);
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  /* padding: 4px 10px; */
   display: inline-flex;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .flow-image-wrap {
   width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .flow-image-wrap > img {
-    max-width: 500px;
+    max-width: 220px;
+    /* max-height: 170px; */
+    width: 100%;
     border-radius: 8px;
     border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* object-fit: cover; */
+
 }
+
 
 .how-block {
   border: 1px solid #ececec;
@@ -126,6 +144,15 @@
   .flow-row {
     grid-template-columns: 1fr;
   }
+  .flow-row {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+    .flow-step {
+      max-width: 90%;
+    }
 
   .hero-card {
     align-self: center;
